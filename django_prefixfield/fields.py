@@ -4,6 +4,7 @@ from django.db import models
 class PrefixField(models.CharField):
     "Implements a prefix field"
 
+    db_index = True
     description = "Implements a prefix field"
 
     def db_type(self, connection):
