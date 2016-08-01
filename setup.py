@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-prefixfield",
-    version="0.1.1",
+    version="0.1.2",
     packages=['django_prefixfield'],
     install_requires=['django>=1.9'],
     author="Iskren Hadzhinedev",

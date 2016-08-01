@@ -13,7 +13,7 @@ class PrefixField(models.CharField):
         if connection.settings_dict['ENGINE'] == 'django.db.backends.postgresql':
             # Check for PostgreSQL and for the prefix plugin
             c = connection.cursor()
-            c.execute("SELECT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'prefix_range')")
-            if c.fetchone()[0]:
+            c.execute("SELECT 1 FROM pg_type WHERE typname = 'prefix_range'")
+            if c.fetchone() is not None:
                 return 'prefix_range'
         return 'char({})'.format(self.max_length)
