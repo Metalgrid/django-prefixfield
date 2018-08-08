@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-prefixfield",
-    version="0.1.2",
+    version="0.1.3",
     packages=['django_prefixfield'],
     install_requires=['django>=1.9'],
     author="Iskren Hadzhinedev",
@@ -10,7 +10,7 @@ setup(
     description="Adds a prefix field for use with Django models",
     url="https://github.com/Metalgrid/django-prefixfield",
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Development',
         'Framework :: Django',
         'Intended Audience :: Developers',

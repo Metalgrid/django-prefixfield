@@ -16,4 +16,4 @@ class PrefixField(models.CharField):
             c.execute("SELECT 1 FROM pg_type WHERE typname = 'prefix_range'")
             if c.fetchone() is not None:
                 return 'prefix_range'
-        return 'char({})'.format(self.max_length)
+        return 'varchar({})'.format(self.max_length)
